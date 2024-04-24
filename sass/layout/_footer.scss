@@ -1,0 +1,47 @@
+
+@use "../utils/variables" as *;
+@use"../utils/mixins" as *;
+
+.footer{
+    background: $color-dark-grey;
+    color:white;
+    padding: 15px;
+    @include desktop{
+      @include flex (row-reverse,flex-start);
+        align-items: last baseline;
+    
+     height: 100px;
+    padding: 0 15px 15px;
+     
+    } 
+    img{
+      filter: brightness(0) saturate(100%) invert(99%) sepia(65%) saturate(56%) hue-rotate(238deg) brightness(110%) contrast(96%);
+      width: 110px;
+      padding: 10px 10px 0;
+     
+    }
+    ul{
+      list-style-type: none;
+      padding: 15px;
+      margin: 0;
+      @include desktop{
+       padding-bottom: 0;
+      }
+    }
+      li{ 
+        padding-bottom: 10px;
+        @include desktop{
+          display: inline-block;
+          padding-left: 20px;
+        }
+      i{
+        padding-right:12px;
+       
+      }
+    }
+      }
+  
+    
+        
+    
+ 

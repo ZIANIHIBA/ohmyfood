@@ -1,0 +1,56 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+
+.header{
+    background-color: green;
+    @include breakpoint("tablet"){
+        background-color: orange;
+    }
+    @include breakpoint("desktop"){
+        background-color: red;
+    }
+}
+/*********header*******/
+header {   
+ 
+    img{
+      display :block;
+     width: 162px;
+      margin:  auto;
+      padding-top: 20px; 
+      @include desktop{
+        width:200
+      }
+      }
+      .bar{
+        @include flex(0,center);
+        box-shadow:  0px 4px 2px darken($primary-color,55%);
+        background:darken($primary-color,10%);
+        height: 40px;
+        margin-top: 20px;
+        padding-left: 15px;
+     i{
+       padding: 8px 12px 14px;
+      font-size: 16px;
+        background:darken($primary-color,10%);
+       
+    }  
+
+    }  
+   
+    input{
+        border:none;
+        outline: none;
+        background: darken($primary-color,10%);
+       width: 140px;
+        &::-webkit-input-placeholder{
+        height: 100px;
+        padding-top: 34px;
+        font-size: 18px;
+        font-weight: medium;
+       
+        color:darken($primary-color,70%);  
+       }       
+    }
+     }
+    

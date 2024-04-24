@@ -1,0 +1,27 @@
+@use"../utils/variables" as*;
+@use"../base/base";
+
+.home{
+   background: $primary-color;
+   text-align: center;
+   padding: 40px;
+    p{
+      color:$color-dark-grey;
+    }
+&__btn{ 
+   border-radius: 30px;
+   border:none;
+   margin: 20px;
+    height: 55px;
+    width: 220px;
+    color:white;
+    font-weight: 500;
+    font-size: 16px;
+    background:linear-gradient(
+       to bottom right ,$color-gradient,$color-purple);
+    
+    &:hover{
+     opacity: 0.7;
+    }
+ }
+  }

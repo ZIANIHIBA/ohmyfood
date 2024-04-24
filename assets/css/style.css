@@ -1,0 +1,350 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  main .home, main .menu, main .fonctionement {
+    padding: 50px 120px;
+  }
+}
+.main-container {
+  padding: 0 60px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+h3, h1, p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+h2, h3 {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.home {
+  background: #F6F6F6;
+  text-align: center;
+  padding: 40px;
+}
+.home p {
+  color: #353535;
+}
+.home__btn {
+  border-radius: 30px;
+  border: none;
+  margin: 20px;
+  height: 55px;
+  width: 220px;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+}
+.home__btn:hover {
+  opacity: 0.7;
+}
+
+.header {
+  background-color: green;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    background-color: orange;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    background-color: red;
+  }
+}
+
+/*********header*******/
+header img {
+  display: block;
+  width: 162px;
+  margin: auto;
+  padding-top: 20px;
+}
+@media screen and (min-width: 1024px) {
+  header img {
+    width: 200;
+  }
+}
+header .bar {
+  display: flex;
+  flex-direction: 0;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 2px #6a6a6a;
+  background: #dddddd;
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 15px;
+}
+header .bar i {
+  padding: 8px 12px 14px;
+  font-size: 16px;
+  background: #dddddd;
+}
+header input {
+  border: none;
+  outline: none;
+  background: #dddddd;
+  width: 140px;
+}
+header input::-webkit-input-placeholder {
+  height: 100px;
+  padding-top: 34px;
+  font-size: 18px;
+  font-weight: medium;
+  color: #444444;
+}
+
+/*******fonctionement carte******/
+.fonctionement {
+  padding: 50px;
+}
+
+@media screen and (min-width: 1024px) {
+  .fonctionement-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.fonctionement-card__title, .fonctionement-card .fonctionement-card__title--purple {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  text-align: center;
+  margin-bottom: 30px;
+  background: #F6F6F6;
+  height: 75px;
+  width: 330px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 6px 10px 0 black;
+}
+.fonctionement-card__title p, .fonctionement-card .fonctionement-card__title--purple p {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.fonctionement-card__title i, .fonctionement-card .fonctionement-card__title--purple i {
+  padding: 20px 20px 20px 0;
+  color: #777777;
+  display: inline-block;
+}
+.fonctionement-card .fonctionement-card__title--purple i {
+  color: #9356DC;
+}
+.fonctionement-card span {
+  color: white;
+  position: absolute;
+  top: 16px;
+  left: -10px;
+  border-radius: 50%;
+  background: #9356DC;
+  padding-top: 5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+}
+
+/****restaurant*****/
+.menu {
+  background: #F6F6F6;
+  padding: 10px 20px 40px;
+}
+@media screen and (min-width: 1024px) {
+  .menu a {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: drop-shadow(0px 3px 10px #F6F6F6);
+  margin: 20px auto;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.card__paragraphe {
+  background: #99E2D0;
+  color: #008766;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 7px;
+  font-weight: 450;
+  font-size: 14px;
+}
+.card__content {
+  display: flex;
+  flex-direction: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 10px 5px;
+}
+.card__heart {
+  position: relative;
+}
+.card__heart:hover .card__heart--full {
+  opacity: 1;
+}
+.card__heart--empty {
+  position: relative;
+  font-size: 20px;
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+.card__heart--empty:hover {
+  opacity: 0;
+}
+.card__heart--full {
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  background: -webkit-linear-gradient(bottom, #9356DC, #FF79DA);
+  --webkit-background-clip: text;
+  --webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.footer {
+  background: #353535;
+  color: white;
+  padding: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    align-items: last baseline;
+    height: 100px;
+    padding: 0 15px 15px;
+  }
+}
+.footer img {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(65%) saturate(56%) hue-rotate(238deg) brightness(110%) contrast(96%);
+  width: 110px;
+  padding: 10px 10px 0;
+}
+.footer ul {
+  list-style-type: none;
+  padding: 15px;
+  margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .footer ul {
+    padding-bottom: 0;
+  }
+}
+.footer li {
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .footer li {
+    display: inline-block;
+    padding-left: 20px;
+  }
+}
+.footer li i {
+  padding-right: 12px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-items: center;
+}
+header img {
+  padding-bottom: 10px;
+}
+header i {
+  padding-left: 20px;
+}
+
+.main {
+  position: relatif;
+}
+.main__img {
+  width: 100%;
+  height: 275px;
+}
+
+.menu-container {
+  background: #F6F6F6;
+  position: absolute;
+  top: 270px;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+}
+.menu-container__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+}
+.menu-container .carte {
+  background: white;
+  border-radius: 15px;
+  height: 65px;
+  width: 335px;
+  padding: 10px 8px 0;
+  margin: 10px;
+}
+.menu-container .carte__price {
+  float: right;
+}
+
+/*# sourceMappingURL=style.css.map */
