@@ -36,11 +36,6 @@ a {
   color: black;
 }
 
-p {
-  font-size: 17px;
-  font-weight: 300;
-}
-
 .home {
   background: #F6F6F6;
   text-align: center;
@@ -79,16 +74,16 @@ p {
 }
 
 /*********header*******/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 header img {
-  display: block;
-  width: 162px;
+  width: 20%;
   margin: auto;
   padding-top: 20px;
-}
-@media screen and (min-width: 1024px) {
-  header img {
-    width: 200;
-  }
 }
 header .bar {
   display: flex;
@@ -98,6 +93,7 @@ header .bar {
   box-shadow: 0px 4px 2px #6a6a6a;
   background: #dddddd;
   height: 40px;
+  width: 100%;
   margin-top: 20px;
   padding-left: 15px;
 }
@@ -125,6 +121,12 @@ header input::-webkit-input-placeholder {
   padding: 50px;
 }
 
+.fonctionement-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 @media screen and (min-width: 1024px) {
   .fonctionement-card {
     display: flex;
@@ -299,52 +301,248 @@ header input::-webkit-input-placeholder {
   padding-right: 12px;
 }
 
-header {
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.entete {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   align-items: center;
 }
-header img {
+.entete img {
   padding-bottom: 10px;
 }
-header i {
+.entete i {
   padding-left: 20px;
 }
 
-.main {
-  position: relatif;
-}
+/******main******/
 .main__img {
   width: 100%;
-  height: 275px;
+  height: 280px;
+  object-fit: cover;
 }
-
-.menu-container {
+.main .menu-container {
+  position: relative;
+  bottom: 50px;
+  margin-bottom: -50px;
   background: #F6F6F6;
-  position: absolute;
-  top: 270px;
-  width: 100%;
   border-radius: 30px 30px 0 0;
+  /******lesmenus*****/
 }
-.menu-container__title {
+.main .menu-container__title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 20px 10px;
 }
-.menu-container .carte {
-  background: white;
-  border-radius: 15px;
-  height: 65px;
-  width: 335px;
-  padding: 10px 8px 0;
-  margin: 10px;
+.main .menu-container__title h1 {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-size: 28px;
 }
-.menu-container .carte__price {
-  float: right;
+.main .menu-container h2 {
+  position: relative;
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.main .menu-container h2::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 2px;
+  width: 30px;
+  border: 1px solid #99E2D0;
+}
+.main .menu-container .showen1 {
+  opacity: 0;
+  animation: opacity 3s linear forwards;
+}
+.main .menu-container .showen2 {
+  opacity: 0;
+  animation: opacity 5s linear forwards;
+}
+.main .menu-container .showen3 {
+  opacity: 0;
+  animation: opacity 7s linear forwards;
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.main .menu-container .menus {
+  display: flex;
+  flex-direction: column;
+  justify-content: 0;
+  align-items: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.main .menu-container .menus .carte-container {
+  display: flex;
+  width: 90%;
+  height: 60px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  box-shadow: 0 2px 5px #F6F6F6;
+}
+.main .menu-container .menus .carte-container:hover .carte-container__chek {
+  margin: 0;
+  transition: all 1s;
+  cursor: pointer;
+}
+.main .menu-container .menus .carte-container__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: -webkit-calc(100% - 54px);
+  padding: 8px 0 8px 16px;
+}
+.main .menu-container .menus .carte-container__title:hover {
+  cursor: pointer;
+}
+.main .menu-container .menus .carte-container__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-end;
+  width: 30px;
+  font-weight: bold;
+  padding: 0 10px 10px 0;
+}
+.main .menu-container .menus .carte-container__price:hover {
+  cursor: pointer;
+}
+.main .menu-container .menus .carte-container__chek {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  width: 50px;
+  margin-right: -70px;
+  color: white;
+  background: #99E2D0;
+  border-radius: 0 16px 16px 0;
+}
+.main .home__btn {
+  margin: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes transform {
+  from {
+    margin: -60px;
+  }
+  to {
+    margin: 0px;
+  }
+}
+/********youtube******/
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356DC;
+  animation: fade 3s linear forwards;
+}
+.loader p {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Shrikhand;
+  color: white;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  margin-left: 60px;
+}
+.loader p::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: -100px;
+  top: -20px;
+  border: 20px solid white;
+  border-top: 20px solid #FF79DA;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+@media screen and (min-width: 1024px) {
+  .loader p::before {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+  }
+  15% {
+    visibility: visible;
+    opacity: 0.95;
+  }
+  25% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  25% {
+    visibility: visible;
+    opacity: 0.8;
+  }
+  65% {
+    visibility: visible;
+    opacity: 0.6;
+  }
+  80% {
+    visibility: hidden;
+    opacity: 0.3;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -100;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

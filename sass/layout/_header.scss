@@ -12,21 +12,21 @@
 }
 /*********header*******/
 header {   
- 
+  @include flex(column,center);
     img{
-      display :block;
-     width: 162px;
+      
+     width: 20%;
       margin:  auto;
       padding-top: 20px; 
-      @include desktop{
-        width:200
-      }
+      
+      
       }
       .bar{
         @include flex(0,center);
         box-shadow:  0px 4px 2px darken($primary-color,55%);
         background:darken($primary-color,10%);
         height: 40px;
+        width: 100%;
         margin-top: 20px;
         padding-left: 15px;
      i{

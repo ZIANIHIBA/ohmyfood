@@ -9,7 +9,7 @@
 }
 
 .fonctionement-card {
-
+  @include flex(column, space-between);
   @include desktop {
     @include flex(row, space-between);
     gap: 20px;
@@ -127,7 +127,7 @@
   &__content {
     @include flex(0, space-between);
     padding: 3px 10px 5px;
-  }
+   }
 
   &__heart {
     position: relative;
@@ -164,5 +164,6 @@
 
 
     }
+     
   }
 }
