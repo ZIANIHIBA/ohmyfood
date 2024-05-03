@@ -3,12 +3,6 @@
 @use"../base/base" as *;
 @use"../layout/footer" as *;
 
-body{
-  margin:0 auto;
-  box-sizing: border-box;
-
-}
-
 .entete {
   img {
     padding-bottom: 10px;
@@ -23,142 +17,213 @@ body{
 
 }
 
-/******main******/
-.main {
+/******main******/ 
  
+.main {
+  
+
   &__img {
     width: 100%;
-  height: 280px;
+    height: 280px;
     object-fit: cover;
   }
-.menu-container {
-position:relative;
-bottom:50px;
-margin-bottom: -50px;
 
-  background: $primary-color;
-
- 
-  border-radius: 30px 30px 0 0;
-  &__title {
-    @include flex (row, space-between);
-    padding: 20px 10px;
-    h1{
-      font-family: "Shrikhand", serif;
-      font-weight: 400;
-      font-size: 28px;
+  .menu-container {
+    @include desktop {
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+     
+      h2{    
+        padding-left: 16%;
+     &::after{ 
+     margin-left: 16%;
      }
-  }
-  h2{
-    position: relative;
-    font-weight: 300;
-    font-size: 18px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    &::after{
-      content:"";
-      
-      position: absolute;
-      top:25px;
-      left:2px;
-    width: 30px;
-    border: 1px solid $color-green;
-    
+    } 
     }
-   }
-   .showen1{
-   opacity: 0;
-   animation:opacity 3s linear  forwards;
- }
- .showen2{
-  opacity: 0;
-  animation:opacity 5s linear  forwards;
-}
-.showen3{
-  opacity: 0;
-   animation:opacity 7s linear  forwards;
-}
- @keyframes  opacity {
-   from {opacity:0;}
-   to{opacity:1;}
- }
-   /******lesmenus*****/
-   .menus{
-    @include flex (column,0);
-    align-items: center;
-  margin-bottom: 30px;
-  
-  .carte-container{
-    display: flex;
-    width: 90%;
-    height: 60px;
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    margin-bottom: 16px;
-    margin-left: 16px;
-    margin-right: 16px;
-    box-shadow: 0 2px 5px $primary-color;
-      &:hover .carte-container__chek{
-        margin: 0;
-       transition: all 1s;
-       cursor: pointer;
-      } 
-  &__title{
-    @include flex (column,space-between);
-    align-items: flex-start;
-    overflow: hidden;
-    white-space:nowrap;
-    text-overflow: ellipsis;
-    width: unquote("-webkit-calc(100% - 54px)");
-    padding: 8px 0 8px 16px;
-    &:hover{
-      cursor: pointer;
+    position:relative;
+    bottom:50px;
+    margin-bottom: -50px;
+    padding-bottom: 22px;
+    background: $primary-color;
+    border-radius: 30px 30px 0 0;
+    &__title {
+      @include flex (row, space-between);
+      @include desktop{
+        justify-content: center;
+        i{
+          margin-left:20px;
+        }
+      }
+      padding: 20px 10px;
+
+      h1 {
+        font-family: "Shrikhand", serif;
+        font-weight: 400;
+        font-size: 28px;
+      }
+    }
+
+    h2 {
+      position: relative;
+      font-weight: 300;
+      font-size: 18px;
+      margin-bottom: 20px;
+      margin-left: 20px;
+      display: flex;
+      align-items: flex-start;
+      &::after {
+        content: "";
+       position:absolute;
+        top: 25px;
+        left: 2px;
+        width: 30px;
+        height: 3px;
+        background:$color-green;
+
+      }
+    }
+/*********animation/apparition*****/
+    .showen1 {
+      opacity: 0;
+      animation: opacity 2s ease  forwards;
+    }
+    .showen2 {
+      opacity: 0;
+
+      animation: opacity 4s ease forwards ;
+
      
     }
-  }
-  &__price{
-    @include flex (row,center);
-    align-items: flex-end;
-    width: 30px;
-    font-weight: bold;
-    padding: 0 10px 10px 0;
-    &:hover{
-      cursor: pointer;
- 
+    .showen3 {
+      opacity: 0;
+      animation: opacity 6s ease  forwards;
+    }
+
+    @keyframes opacity {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
    
-  }
-    &__chek{
-      @include flex (row,center);
+   
+    /******lesmenus*****/
+ 
+    .menus {
+      @include flex (column, space-between);
       align-items: center;
-      width:50px;
-      margin-right:-70px;
-      color:white;
-      background:$color-green;
-      border-radius:0 16px 16px 0 ;
+      margin-bottom: 30px;
      
      
-    }
-  }
-   }
-}
-.home__btn{
-  margin: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-}
+      .carte-container {
+        @include desktop{
+          width: 65%;
+        }
+       
+        display: flex;
+        width: 90%;
+        height: 70px;
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        margin-bottom: 16px;
+        margin-left: 16px;
+        margin-right: 16px;
+        box-shadow:0px 3px 15px lighten(black,85%);
 
+        &:hover .carte-container__chek {
+          margin: 0;
+          transition: all 1s;
+          cursor: pointer;
+        }
+
+        &__title {
+          @include flex (column, center);
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+         
+          align-items: flex-start;
+          width:  unquote("-webkit-calc(100% - 54px)");
+          padding: 8px 0 16px 16px;
+        
+          &:hover {
+            cursor: pointer;
+
+          }
+        }
+
+        &__price {
+          @include flex (row, center);
+          align-items: flex-end;
+          width: 30px;
+          font-weight: bold;
+          padding: 0 10px 10px 0;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+          &:hover {
+            cursor: pointer;
+
+          }
+
+        }
+
+        &__chek {
+          @include flex (row, center);
+          align-items: center;
+          width: 50px;
+          margin-right: -4rem;
+          color: white;
+          background: $color-green;
+          border-radius: 0 16px 16px 0;
+
+
+        }
+      }
+    }
+
+
+    .home__btn {
+      margin: auto;
+      display: block;
+      width: 160px;
+     height: 45px;
+     background: linear-gradient(to bottom , $color-gradient,$color-purple,);
+
+   
+      }
+    
+
+     }
+  }
 
 
   
 
-@keyframes transform{
-from{margin:-60px};
-to{margin: 0px;}
+  
+
+
+
+
+
+
+@keyframes transform {
+  from {
+    margin: -60px
+  }
+
+  ;
+
+  to {
+    margin: 0px;
+  }
 }
 
- 
+
 /********youtube******/

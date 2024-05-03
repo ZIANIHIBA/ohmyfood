@@ -1,6 +1,4 @@
 
-   
-
 @mixin desktop {
     @media screen and (min-width:1024px) {
         @content;
@@ -13,15 +11,17 @@
     justify-content: $justify;
     align-items: center;
 }
-@mixin breakpoint($type){
-    @if $type == "tablet" {
-        @media screen and (min-width: 768px){
-            @content;
+
+     @mixin Btn{
+        border-radius: 30px;
+        border:none;
+        margin: 20px;
+         height: 55px;
+         width: 220px;
+         color:white;
+         font-weight: 500;
+         font-size: 16px;
+        
         }
-    }
-    @else if $type == "desktop" {
-        @media screen and (min-width: 1024px){
-            @content;
-        }
-    }
-     }
+
+        

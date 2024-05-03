@@ -1,0 +1,65 @@
+@use "../utils/mixins" as*;
+@use "../utils/variables" as*;
+@use"../base/base" as*;
+
+/*******fonctionement ******/
+.fonctionement {
+  h2{
+    padding-left: 20px;
+  }
+  @include desktop{ 
+  h2{
+    padding-top: 20px;
+    position: relative;
+   left:12%;
+  }
+  } 
+  .fonctionement-card {
+    @include flex(column, space-between);
+    @include desktop {
+      @include flex(row, center);
+     gap: 30px;
+    }
+    &__title {
+      @include flex(row, center);
+      @include desktop{ 
+        width: 24%;
+      }
+      text-align: center;
+      margin-bottom: 30px;
+      background: $primary-color;
+      height: 75px;
+      width: 320px;
+      border-radius: 20px;
+      position: relative;
+      box-shadow:0px 3px 15px lighten(black,85%);
+      .number{
+        position: absolute;
+        left: -6px;
+        width: 24px;
+        height:24px;
+        border-radius: 50%;
+        padding-top: 2px;
+        color: white;
+        background: $color-purple;
+      }
+      p {
+        font-weight:500;
+        font-size: 16px;
+        margin: 10px 0;
+      }
+      i {
+        padding: 20px 20px 20px 0;
+        color: darken($primary-color, 50%);
+        display: inline-block;
+      }
+    } 
+    .fonctionement-card__title--purple {
+      @extend .fonctionement-card__title;
+      i {
+        color: $color-purple;
+      }
+    }
+  }
+} 
+  

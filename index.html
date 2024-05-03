@@ -8,12 +8,11 @@
     <script src="https://kit.fontawesome.com/33a4fc6b58.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title></title>
+    <title>ohmyfood accueil</title>
 </head>
 
 <body>
@@ -29,7 +28,7 @@
     <main>
 
         <section class="home">
-            <h1>Reservez le menu qui vous convient</h1>
+            <h1>Réservez le menu qui vous convient</h1>
             <p>Decouvrez des restaurants d'exeption,sélectionnés par nos soins.</p>
             <button class="home__btn">Explorer nos restaurants</button>
         </section>
@@ -37,18 +36,24 @@
         <section class="fonctionement">
             <h2>fonctionnement</h2>
             <div class="fonctionement-card">
-                <div class="fonctionement-card__title"><span>1</span><i class="fa-solid fa-mobile-screen-button"></i>
-                    <p>choissisez un restaurant</p>
-                </div>
+                <article class="fonctionement-card__title">
+                <p class="number">1</p>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <p>choissisez un restaurant</p>
+                </article>
 
-                <div class="fonctionement-card__title">
-                    <p><span>2</span><i class="fa-solid fa-list-ul"></i>composez votre menu </p>
-                </div>
+                <article class="fonctionement-card__title">
+                    <p class="number">2</p>
+                    <i class="fa-solid fa-list-ul"></i>
+                    <p>composez votre menu </p>
+                </article>
 
 
-                <div class="fonctionement-card__title--purple">
-                    <p><span>3</span><i class="fa-solid fa-store"></i>degustez au restaurant</p>
-                </div>
+                <article class="fonctionement-card__title--purple">
+                    <p class="number">3</p>
+                    <i class="fa-solid fa-store"></i>
+                     <p>degustez au restaurant</p>
+                </article>
 
             </div>
         
@@ -83,7 +88,11 @@
                                 <h3>La note enchantée </h3>
                                 <p>Charbonne</p>
                             </div>
-                            <i class="fa-regular fa-heart"></i>
+                            <div class="card__heart">
+                                <span class="card__heart--full"><i class="fa-xl fa-solid fa-heart"></i></span>
+                                <span class="card__heart--empty"><i class="fa-xl fa-regular fa-heart"></i></span>
+
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -96,7 +105,11 @@
                                 <h3>À la française </h3>
                                 <p>Cité Rouge</p>
                             </div>
-                            <i class="fa-regular fa-heart"></i>
+                            <div class="card__heart">
+                                <span class="card__heart--full"><i class="fa-xl fa-solid fa-heart"></i></span>
+                                <span class="card__heart--empty"><i class="fa-xl fa-regular fa-heart"></i></span>
+
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -109,7 +122,10 @@
                                 <h3>Le délices des sens </h3>
                                 <p>Folie-Merie-court</p>
                             </div>
-                            <i class="fa-regular fa-heart"></i>
+                            <div class="card__heart">
+                                <span class="card__heart--full"><i class="fa-xl fa-solid fa-heart"></i></span>
+                                <span class="card__heart--empty"><i class="fa-xl fa-regular fa-heart"></i></span>
+                            </div>
                         </div>
                     </article>
                 </a>
@@ -123,7 +139,7 @@
             <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
             <li><i class="fa-solid fa-handshake-angle"></i>Devinir partenaire </li>
             <li>Mentions legal </li>
-            <li>Contact</li>
+            <li><a href="mailto:someone@example.com">Contact</a></li>
 
         </ul>
     </footer>

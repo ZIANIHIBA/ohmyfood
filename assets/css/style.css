@@ -1,47 +1,36 @@
-html {
-  box-sizing: border-box;
-}
-
 body {
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  max-width: 1440px;
+  overflow-x: hidden;
 }
-
-main {
-  margin: 0 auto;
-}
-@media screen and (min-width: 1024px) {
-  main .home, main .menu, main .fonctionement {
-    padding: 50px 120px;
-  }
-}
-.main-container {
-  padding: 0 60px;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-h3, h1, p {
+body h3, body h1, body p {
   margin-bottom: 5px;
   margin-top: 5px;
 }
-
-h2, h3 {
-  margin-top: 0;
-}
-
-a {
+body a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 .home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #F6F6F6;
   text-align: center;
   padding: 40px;
 }
+@media screen and (min-width: 1024px) {
+  .home {
+    padding: 50px 120px;
+  }
+}
 .home p {
+  font-size: 18px;
   color: #353535;
 }
 .home__btn {
@@ -53,24 +42,10 @@ a {
   color: white;
   font-weight: 500;
   font-size: 16px;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
 }
 .home__btn:hover {
   opacity: 0.7;
-}
-
-.header {
-  background-color: green;
-}
-@media screen and (min-width: 768px) {
-  .header {
-    background-color: orange;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .header {
-    background-color: red;
-  }
 }
 
 /*********header*******/
@@ -81,7 +56,7 @@ header {
   align-items: center;
 }
 header img {
-  width: 20%;
+  width: 220px;
   margin: auto;
   padding-top: 20px;
 }
@@ -90,15 +65,25 @@ header .bar {
   flex-direction: 0;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 4px 2px #6a6a6a;
+  box-shadow: inset 8px 5px 5px -3px #aaaaaa;
   background: #dddddd;
   height: 40px;
   width: 100%;
   margin-top: 20px;
   padding-left: 15px;
+  position: relative;
+}
+header .bar::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 0.1px;
+  background: #dddddd;
+  box-shadow: 2px 3px 3px #5d5d5d;
 }
 header .bar i {
-  padding: 8px 12px 14px;
+  padding: 3px 12px 14px;
   font-size: 16px;
   background: #dddddd;
 }
@@ -116,83 +101,27 @@ header input::-webkit-input-placeholder {
   color: #444444;
 }
 
-/*******fonctionement carte******/
-.fonctionement {
-  padding: 50px;
-}
-
-.fonctionement-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-@media screen and (min-width: 1024px) {
-  .fonctionement-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-  }
-}
-.fonctionement-card__title, .fonctionement-card .fonctionement-card__title--purple {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: auto;
-  text-align: center;
-  margin-bottom: 30px;
-  background: #F6F6F6;
-  height: 75px;
-  width: 330px;
-  border-radius: 20px;
-  position: relative;
-  box-shadow: 0 6px 10px 0 black;
-}
-.fonctionement-card__title p, .fonctionement-card .fonctionement-card__title--purple p {
-  font-weight: 500;
-  font-size: 16px;
-  margin: 10px 0;
-}
-.fonctionement-card__title i, .fonctionement-card .fonctionement-card__title--purple i {
-  padding: 20px 20px 20px 0;
-  color: #777777;
-  display: inline-block;
-}
-.fonctionement-card .fonctionement-card__title--purple i {
-  color: #9356DC;
-}
-.fonctionement-card span {
-  color: white;
-  position: absolute;
-  top: 16px;
-  left: -10px;
-  border-radius: 50%;
-  background: #9356DC;
-  padding-top: 5px;
-  width: 25px;
-  height: 25px;
-  text-align: center;
-}
-
 /****restaurant*****/
 .menu {
   background: #F6F6F6;
   padding: 10px 20px 40px;
 }
 @media screen and (min-width: 1024px) {
+  .menu h2 {
+    position: relative;
+    left: 12%;
+  }
   .menu a {
-    width: 40%;
+    width: 35%;
   }
 }
 @media screen and (min-width: 1024px) {
   .menu__cards {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    column-gap: 80px;
     flex-wrap: wrap;
   }
 }
@@ -213,7 +142,7 @@ header input::-webkit-input-placeholder {
 }
 .card__paragraphe {
   background: #99E2D0;
-  color: #008766;
+  color: #20705d;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -301,11 +230,6 @@ header input::-webkit-input-placeholder {
   padding-right: 12px;
 }
 
-body {
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
 .entete {
   display: flex;
   flex-direction: row;
@@ -330,9 +254,24 @@ body {
   position: relative;
   bottom: 50px;
   margin-bottom: -50px;
+  padding-bottom: 22px;
   background: #F6F6F6;
   border-radius: 30px 30px 0 0;
+  /*********animation/apparition*****/
   /******lesmenus*****/
+}
+@media screen and (min-width: 1024px) {
+  .main .menu-container {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main .menu-container h2 {
+    padding-left: 16%;
+  }
+  .main .menu-container h2::after {
+    margin-left: 16%;
+  }
 }
 .main .menu-container__title {
   display: flex;
@@ -340,6 +279,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 10px;
+}
+@media screen and (min-width: 1024px) {
+  .main .menu-container__title {
+    justify-content: center;
+  }
+  .main .menu-container__title i {
+    margin-left: 20px;
+  }
 }
 .main .menu-container__title h1 {
   font-family: "Shrikhand", serif;
@@ -352,6 +299,8 @@ body {
   font-size: 18px;
   margin-bottom: 20px;
   margin-left: 20px;
+  display: flex;
+  align-items: flex-start;
 }
 .main .menu-container h2::after {
   content: "";
@@ -359,19 +308,20 @@ body {
   top: 25px;
   left: 2px;
   width: 30px;
-  border: 1px solid #99E2D0;
+  height: 3px;
+  background: #99E2D0;
 }
 .main .menu-container .showen1 {
   opacity: 0;
-  animation: opacity 3s linear forwards;
+  animation: opacity 2s ease forwards;
 }
 .main .menu-container .showen2 {
   opacity: 0;
-  animation: opacity 5s linear forwards;
+  animation: opacity 4s ease forwards;
 }
 .main .menu-container .showen3 {
   opacity: 0;
-  animation: opacity 7s linear forwards;
+  animation: opacity 6s ease forwards;
 }
 @keyframes opacity {
   from {
@@ -384,7 +334,7 @@ body {
 .main .menu-container .menus {
   display: flex;
   flex-direction: column;
-  justify-content: 0;
+  justify-content: space-between;
   align-items: center;
   align-items: center;
   margin-bottom: 30px;
@@ -392,14 +342,19 @@ body {
 .main .menu-container .menus .carte-container {
   display: flex;
   width: 90%;
-  height: 60px;
+  height: 70px;
   background: white;
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 16px;
   margin-left: 16px;
   margin-right: 16px;
-  box-shadow: 0 2px 5px #F6F6F6;
+  box-shadow: 0px 3px 15px #d9d9d9;
+}
+@media screen and (min-width: 1024px) {
+  .main .menu-container .menus .carte-container {
+    width: 65%;
+  }
 }
 .main .menu-container .menus .carte-container:hover .carte-container__chek {
   margin: 0;
@@ -409,14 +364,14 @@ body {
 .main .menu-container .menus .carte-container__title {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  align-items: flex-start;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  align-items: flex-start;
   width: -webkit-calc(100% - 54px);
-  padding: 8px 0 8px 16px;
+  padding: 8px 0 16px 16px;
 }
 .main .menu-container .menus .carte-container__title:hover {
   cursor: pointer;
@@ -430,6 +385,9 @@ body {
   width: 30px;
   font-weight: bold;
   padding: 0 10px 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .main .menu-container .menus .carte-container__price:hover {
   cursor: pointer;
@@ -441,16 +399,17 @@ body {
   align-items: center;
   align-items: center;
   width: 50px;
-  margin-right: -70px;
+  margin-right: -4rem;
   color: white;
   background: #99E2D0;
   border-radius: 0 16px 16px 0;
 }
-.main .home__btn {
+.main .menu-container .home__btn {
   margin: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 160px;
+  height: 45px;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
 }
 
 @keyframes transform {
@@ -543,6 +502,74 @@ body {
     opacity: 0;
     z-index: -100;
   }
+}
+/*******fonctionement ******/
+.fonctionement h2 {
+  padding-left: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionement h2 {
+    padding-top: 20px;
+    position: relative;
+    left: 12%;
+  }
+}
+.fonctionement .fonctionement-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionement .fonctionement-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+}
+.fonctionement .fonctionement-card__title, .fonctionement .fonctionement-card .fonctionement-card__title--purple {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  background: #F6F6F6;
+  height: 75px;
+  width: 320px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0px 3px 15px #d9d9d9;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionement .fonctionement-card__title, .fonctionement .fonctionement-card .fonctionement-card__title--purple {
+    width: 24%;
+  }
+}
+.fonctionement .fonctionement-card__title .number, .fonctionement .fonctionement-card .fonctionement-card__title--purple .number {
+  position: absolute;
+  left: -6px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding-top: 2px;
+  color: white;
+  background: #9356DC;
+}
+.fonctionement .fonctionement-card__title p, .fonctionement .fonctionement-card .fonctionement-card__title--purple p {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.fonctionement .fonctionement-card__title i, .fonctionement .fonctionement-card .fonctionement-card__title--purple i {
+  padding: 20px 20px 20px 0;
+  color: #777777;
+  display: inline-block;
+}
+.fonctionement .fonctionement-card .fonctionement-card__title--purple i {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */
