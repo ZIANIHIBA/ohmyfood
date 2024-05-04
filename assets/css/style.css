@@ -48,6 +48,243 @@ body a {
   opacity: 0.7;
 }
 
+/*******fonctionement ******/
+.fonctionement h2 {
+  padding-left: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionement h2 {
+    padding-top: 20px;
+    position: relative;
+    left: 12%;
+  }
+}
+.fonctionement .fonctionement-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionement .fonctionement-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+}
+.fonctionement .fonctionement-card__title, .fonctionement .fonctionement-card .fonctionement-card__title--purple {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  background: #F6F6F6;
+  height: 75px;
+  width: 320px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0px 3px 15px #d9d9d9;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionement .fonctionement-card__title, .fonctionement .fonctionement-card .fonctionement-card__title--purple {
+    width: 24%;
+  }
+}
+.fonctionement .fonctionement-card__title .number, .fonctionement .fonctionement-card .fonctionement-card__title--purple .number {
+  position: absolute;
+  left: -6px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding-top: 2px;
+  color: white;
+  background: #9356DC;
+}
+.fonctionement .fonctionement-card__title p, .fonctionement .fonctionement-card .fonctionement-card__title--purple p {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.fonctionement .fonctionement-card__title i, .fonctionement .fonctionement-card .fonctionement-card__title--purple i {
+  padding: 20px 20px 20px 0;
+  color: #777777;
+  display: inline-block;
+}
+.fonctionement .fonctionement-card .fonctionement-card__title--purple i {
+  color: #9356DC;
+}
+
+/****restaurant*****/
+.menu {
+  background: #F6F6F6;
+  padding: 10px 20px 40px;
+}
+@media screen and (min-width: 1024px) {
+  .menu h2 {
+    position: relative;
+    left: 12%;
+  }
+  .menu a {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 80px;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: drop-shadow(0px 3px 10px #F6F6F6);
+  margin: 20px auto;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.card__paragraphe {
+  background: #99E2D0;
+  color: #20705d;
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 7px;
+  font-weight: 450;
+  font-size: 14px;
+}
+.card__content {
+  display: flex;
+  flex-direction: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 10px 5px;
+}
+.card__heart {
+  position: relative;
+}
+.card__heart:hover .card__heart--full {
+  opacity: 1;
+}
+.card__heart--empty {
+  position: relative;
+  font-size: 20px;
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+.card__heart--empty:hover {
+  opacity: 0;
+}
+.card__heart--full {
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  background: -webkit-linear-gradient(bottom, #9356DC, #FF79DA);
+  --webkit-background-clip: text;
+  --webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356DC;
+  animation: fade 3s linear forwards;
+}
+.loader p {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Shrikhand;
+  color: white;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  margin-left: 60px;
+}
+.loader p::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: -100px;
+  top: -20px;
+  border: 20px solid white;
+  border-top: 20px solid #FF79DA;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+@media screen and (min-width: 1024px) {
+  .loader p::before {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+  }
+  15% {
+    visibility: visible;
+    opacity: 0.95;
+  }
+  25% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  25% {
+    visibility: visible;
+    opacity: 0.8;
+  }
+  65% {
+    visibility: visible;
+    opacity: 0.6;
+  }
+  80% {
+    visibility: hidden;
+    opacity: 0.3;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -100;
+  }
+}
 /*********header*******/
 header {
   display: flex;
@@ -99,91 +336,6 @@ header input::-webkit-input-placeholder {
   font-size: 18px;
   font-weight: medium;
   color: #444444;
-}
-
-/****restaurant*****/
-.menu {
-  background: #F6F6F6;
-  padding: 10px 20px 40px;
-}
-@media screen and (min-width: 1024px) {
-  .menu h2 {
-    position: relative;
-    left: 12%;
-  }
-  .menu a {
-    width: 35%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .menu__cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    column-gap: 80px;
-    flex-wrap: wrap;
-  }
-}
-
-.card {
-  position: relative;
-  width: 100%;
-  background: white;
-  border-radius: 20px;
-  box-shadow: drop-shadow(0px 3px 10px #F6F6F6);
-  margin: 20px auto;
-}
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 20px 20px 0 0;
-}
-.card__paragraphe {
-  background: #99E2D0;
-  color: #20705d;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 7px;
-  font-weight: 450;
-  font-size: 14px;
-}
-.card__content {
-  display: flex;
-  flex-direction: 0;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3px 10px 5px;
-}
-.card__heart {
-  position: relative;
-}
-.card__heart:hover .card__heart--full {
-  opacity: 1;
-}
-.card__heart--empty {
-  position: relative;
-  font-size: 20px;
-  transition: opacity 1s ease;
-  opacity: 1;
-}
-.card__heart--empty:hover {
-  opacity: 0;
-}
-.card__heart--full {
-  font-size: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1s ease;
-  background: -webkit-linear-gradient(bottom, #9356DC, #FF79DA);
-  --webkit-background-clip: text;
-  --webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
 }
 
 .footer {
@@ -341,6 +493,7 @@ header input::-webkit-input-placeholder {
 }
 .main .menu-container .menus .carte-container {
   display: flex;
+  justify-content: space-between;
   width: 90%;
   height: 70px;
   background: white;
@@ -350,6 +503,7 @@ header input::-webkit-input-placeholder {
   margin-left: 16px;
   margin-right: 16px;
   box-shadow: 0px 3px 15px #d9d9d9;
+  position: relative;
 }
 @media screen and (min-width: 1024px) {
   .main .menu-container .menus .carte-container {
@@ -357,21 +511,27 @@ header input::-webkit-input-placeholder {
   }
 }
 .main .menu-container .menus .carte-container:hover .carte-container__chek {
-  margin: 0;
+  right: 0;
   transition: all 1s;
   cursor: pointer;
+}
+.main .menu-container .menus .carte-container:hover .carte-container__price {
+  transform: translateX(-50px);
 }
 .main .menu-container .menus .carte-container__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  width: -webkit-calc(100% - 54px);
+  align-items: flex-start;
+  padding: 8px 0 0px 16px;
+}
+.main .menu-container .menus .carte-container__title p {
   white-space: nowrap;
   text-overflow: ellipsis;
-  align-items: flex-start;
+  overflow: hidden;
   width: -webkit-calc(100% - 54px);
-  padding: 8px 0 16px 16px;
 }
 .main .menu-container .menus .carte-container__title:hover {
   cursor: pointer;
@@ -385,9 +545,7 @@ header input::-webkit-input-placeholder {
   width: 30px;
   font-weight: bold;
   padding: 0 10px 10px 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  transition: transform 0.5s;
 }
 .main .menu-container .menus .carte-container__price:hover {
   cursor: pointer;
@@ -399,17 +557,18 @@ header input::-webkit-input-placeholder {
   align-items: center;
   align-items: center;
   width: 50px;
-  margin-right: -4rem;
+  height: 70px;
+  right: -50px;
   color: white;
   background: #99E2D0;
   border-radius: 0 16px 16px 0;
+  position: absolute;
 }
 .main .menu-container .home__btn {
   margin: auto;
   display: block;
   width: 160px;
   height: 45px;
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
 }
 
 @keyframes transform {
@@ -421,155 +580,5 @@ header input::-webkit-input-placeholder {
   }
 }
 /********youtube******/
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #9356DC;
-  animation: fade 3s linear forwards;
-}
-.loader p {
-  font-size: 40px;
-  font-weight: bold;
-  font-family: Shrikhand;
-  color: white;
-  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-  margin-left: 60px;
-}
-.loader p::before {
-  content: "";
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  left: -100px;
-  top: -20px;
-  border: 20px solid white;
-  border-top: 20px solid #FF79DA;
-  border-radius: 50%;
-  animation: spin 0.75s linear infinite;
-}
-@media screen and (min-width: 1024px) {
-  .loader p::before {
-    width: 45px;
-    height: 45px;
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes fade {
-  0% {
-    visibility: visible;
-    opacity: 1;
-    z-index: 1000;
-  }
-  15% {
-    visibility: visible;
-    opacity: 0.95;
-  }
-  25% {
-    visibility: visible;
-    opacity: 0.9;
-  }
-  25% {
-    visibility: visible;
-    opacity: 0.8;
-  }
-  65% {
-    visibility: visible;
-    opacity: 0.6;
-  }
-  80% {
-    visibility: hidden;
-    opacity: 0.3;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-    z-index: -100;
-  }
-}
-/*******fonctionement ******/
-.fonctionement h2 {
-  padding-left: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .fonctionement h2 {
-    padding-top: 20px;
-    position: relative;
-    left: 12%;
-  }
-}
-.fonctionement .fonctionement-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-@media screen and (min-width: 1024px) {
-  .fonctionement .fonctionement-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-  }
-}
-.fonctionement .fonctionement-card__title, .fonctionement .fonctionement-card .fonctionement-card__title--purple {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 30px;
-  background: #F6F6F6;
-  height: 75px;
-  width: 320px;
-  border-radius: 20px;
-  position: relative;
-  box-shadow: 0px 3px 15px #d9d9d9;
-}
-@media screen and (min-width: 1024px) {
-  .fonctionement .fonctionement-card__title, .fonctionement .fonctionement-card .fonctionement-card__title--purple {
-    width: 24%;
-  }
-}
-.fonctionement .fonctionement-card__title .number, .fonctionement .fonctionement-card .fonctionement-card__title--purple .number {
-  position: absolute;
-  left: -6px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  padding-top: 2px;
-  color: white;
-  background: #9356DC;
-}
-.fonctionement .fonctionement-card__title p, .fonctionement .fonctionement-card .fonctionement-card__title--purple p {
-  font-weight: 500;
-  font-size: 16px;
-  margin: 10px 0;
-}
-.fonctionement .fonctionement-card__title i, .fonctionement .fonctionement-card .fonctionement-card__title--purple i {
-  padding: 20px 20px 20px 0;
-  color: #777777;
-  display: inline-block;
-}
-.fonctionement .fonctionement-card .fonctionement-card__title--purple i {
-  color: #9356DC;
-}
 
 /*# sourceMappingURL=style.css.map */
