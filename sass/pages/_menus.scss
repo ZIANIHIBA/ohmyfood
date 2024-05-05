@@ -190,22 +190,16 @@
           background: $color-green;
           border-radius: 0 16px 16px 0;
           position: absolute;
-
-
         }
       }
     }
-
-
     .home__btn {
       margin: auto;
       display: block;
+      
       width: 160px;
-     height: 45px;
-   
+      height: 45px;
       }
-    
-
      }
   }
 
@@ -219,17 +213,5 @@
 
 
 
-@keyframes transform {
-  from {
-    margin: -60px
-  }
-
-  ;
-
-  to {
-    margin: 0px;
-  }
-}
 
 
-/********youtube******/

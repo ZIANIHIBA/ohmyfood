@@ -571,14 +571,4 @@ header input::-webkit-input-placeholder {
   height: 45px;
 }
 
-@keyframes transform {
-  from {
-    margin: -60px;
-  }
-  to {
-    margin: 0px;
-  }
-}
-/********youtube******/
-
 /*# sourceMappingURL=style.css.map */
