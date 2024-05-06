@@ -103,7 +103,7 @@ body a {
   color: white;
   background: #9356DC;
 }
-.fonctionement .fonctionement-card__title p, .fonctionement .fonctionement-card .fonctionement-card__title--purple p {
+.fonctionement .fonctionement-card__title h3, .fonctionement .fonctionement-card .fonctionement-card__title--purple h3 {
   font-weight: 500;
   font-size: 16px;
   margin: 10px 0;
@@ -147,7 +147,6 @@ body a {
   width: 100%;
   background: white;
   border-radius: 20px;
-  box-shadow: drop-shadow(0px 3px 10px #F6F6F6);
   margin: 20px auto;
 }
 .card img {
@@ -169,7 +168,7 @@ body a {
 }
 .card__content {
   display: flex;
-  flex-direction: 0;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 3px 10px 5px;
@@ -299,7 +298,7 @@ header img {
 }
 header .bar {
   display: flex;
-  flex-direction: 0;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   box-shadow: inset 8px 5px 5px -3px #aaaaaa;
@@ -334,7 +333,7 @@ header input::-webkit-input-placeholder {
   height: 100px;
   padding-top: 34px;
   font-size: 18px;
-  font-weight: medium;
+  font-weight: 500;
   color: #444444;
 }
 
