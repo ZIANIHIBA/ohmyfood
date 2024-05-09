@@ -1,23 +1,27 @@
 
 @use "../utils/variables" as *;
 @use"../utils/mixins" as *;
+@use"../base/base" as*;
 
 .footer{
+
     background: $color-dark-grey;
     color:white;
-    padding: 15px;
+    padding: 25px;
     @include desktop{
+   
       @include flex (row-reverse,flex-start);
         align-items: last baseline;
     
      height: 100px;
-    padding: 0 15px 15px;
-     
+    padding: 0 20px 15px;
+    
     } 
     img{
       filter: brightness(0) saturate(100%) invert(99%) sepia(65%) saturate(56%) hue-rotate(238deg) brightness(110%) contrast(96%);
-      width: 110px;
-      padding: 10px 10px 0;
+      width: 130px;
+      padding-top: 10px;
+      padding-right: 20px;
      
     }
     ul{

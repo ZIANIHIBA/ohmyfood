@@ -1,4 +1,4 @@
-
+@use"../utils/variables" as*;
 @mixin desktop {
     @media screen and (min-width:1024px) {
         @content;
@@ -21,6 +21,13 @@
          color:white;
          font-weight: 500;
          font-size: 16px;
+         background: linear-gradient(to top left, $color-purple,$color-gradient);
+         box-shadow:  0 8px 10px lighten( $color-dark-grey, 60%);
+         transition: all 0.5;
+         &:hover{
+            transform: scale(1.04);
+            opacity: 0.5;
+         }
         
         }
 

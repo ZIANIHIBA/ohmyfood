@@ -4,22 +4,32 @@
 
 /****restaurant*****/
 .menu {
+  width: 100%;
   background: $primary-color;
-  padding: 10px 20px 40px;
-  @include desktop{
-  
+  padding: 10px  ;
   h2{
-    position: relative;
-   left:12%;
+    padding-left: 20px;
   }
-  a {
-      width: 35%;
-    }
+  @include desktop{
+    padding: 10px 0px 40px;
+  h2{
+    padding-left: 120px;
+   display: block;
+   width: 200px;
+  }
+ 
   }
 
   &__cards {
+    a {
+      width: 349px;
+    }
+    @include flex(column,center);
+   
     @include desktop {
-      
+      a {
+        width: 35%;
+      }
       @include flex (row, center);
       column-gap: 80px;
       flex-wrap: wrap;
@@ -29,7 +39,7 @@
 
 .card {
   position: relative;
-  width: 100%;
+
   background: white;
   border-radius: 20px;
   margin: 20px auto;
