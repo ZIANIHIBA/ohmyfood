@@ -2,9 +2,10 @@
 @use "../utils/variables" as *;
 @use"../utils/mixins" as *;
 @use"../base/base" as*;
-
+body{
 .footer{
-
+  width:100%;
+   box-sizing: border-box;
     background: $color-dark-grey;
     color:white;
     padding: 25px;
@@ -45,7 +46,7 @@
     }
       }
   
-    
+    }
         
     
  

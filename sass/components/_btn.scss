@@ -1,10 +1,11 @@
 @use"../utils/variables" as*;
 @use"../base/base";
 @use"../utils/mixins" as *;
-
+body{ 
+   main{ 
 .home {
    width: 100%;
- 
+  box-sizing: border-box;
    background: $primary-color;
    text-align: center;
    padding: 10px;
@@ -23,4 +24,6 @@
 
      
    }
+}
+}
 }

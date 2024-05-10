@@ -20,8 +20,9 @@ html body a {
   color: inherit;
 }
 
-.home {
+body main .home {
   width: 100%;
+  box-sizing: border-box;
   background: #F6F6F6;
   text-align: center;
   padding: 10px;
@@ -31,15 +32,15 @@ html body a {
   align-items: center;
 }
 @media screen and (min-width: 1024px) {
-  .home {
+  body main .home {
     padding: 50px 0;
   }
 }
-.home p {
+body main .home p {
   font-size: 18px;
   color: #353535;
 }
-.home__btn {
+body main .home__btn {
   border-radius: 30px;
   border: none;
   margin: 20px;
@@ -52,33 +53,34 @@ html body a {
   box-shadow: 0 8px 10px #cecece;
   transition: all 0.5;
 }
-.home__btn:hover {
+body main .home__btn:hover {
   transform: scale(1.04);
   opacity: 0.5;
 }
 
 /*******fonctionement ******/
-.fonctionement {
+body .fonctionement {
+  box-sizing: border-box;
   width: 100%;
 }
-.fonctionement h2 {
+body .fonctionement h2 {
   padding-left: 30px;
 }
 @media screen and (min-width: 1024px) {
-  .fonctionement h2 {
+  body .fonctionement h2 {
     padding-left: 140px;
     display: block;
     width: 200px;
   }
 }
-.fonctionement .fonctionement-card {
+body .fonctionement .fonctionement-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 @media screen and (min-width: 1024px) {
-  .fonctionement .fonctionement-card {
+  body .fonctionement .fonctionement-card {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -86,7 +88,7 @@ html body a {
     gap: 30px;
   }
 }
-.fonctionement .fonctionement-card__title, .fonctionement .fonctionement-card .fonctionement-card__title--purple {
+body .fonctionement .fonctionement-card__title, body .fonctionement .fonctionement-card .fonctionement-card__title--purple {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -101,11 +103,11 @@ html body a {
   box-shadow: 0px 3px 15px #d9d9d9;
 }
 @media screen and (min-width: 1024px) {
-  .fonctionement .fonctionement-card__title, .fonctionement .fonctionement-card .fonctionement-card__title--purple {
+  body .fonctionement .fonctionement-card__title, body .fonctionement .fonctionement-card .fonctionement-card__title--purple {
     width: 24%;
   }
 }
-.fonctionement .fonctionement-card__title .number, .fonctionement .fonctionement-card .fonctionement-card__title--purple .number {
+body .fonctionement .fonctionement-card__title .number, body .fonctionement .fonctionement-card .fonctionement-card__title--purple .number {
   position: absolute;
   left: -6px;
   width: 24px;
@@ -115,50 +117,51 @@ html body a {
   color: white;
   background: #9356DC;
 }
-.fonctionement .fonctionement-card__title h3, .fonctionement .fonctionement-card .fonctionement-card__title--purple h3 {
+body .fonctionement .fonctionement-card__title h3, body .fonctionement .fonctionement-card .fonctionement-card__title--purple h3 {
   font-weight: 500;
   font-size: 16px;
   margin: 10px 0;
 }
-.fonctionement .fonctionement-card__title i, .fonctionement .fonctionement-card .fonctionement-card__title--purple i {
+body .fonctionement .fonctionement-card__title i, body .fonctionement .fonctionement-card .fonctionement-card__title--purple i {
   padding: 20px 20px 20px 0;
   color: #777777;
   display: inline-block;
 }
-.fonctionement .fonctionement-card .fonctionement-card__title--purple i {
+body .fonctionement .fonctionement-card .fonctionement-card__title--purple i {
   color: #9356DC;
 }
 
 /****restaurant*****/
-.menu {
+body main .menu {
+  box-sizing: border-box;
   width: 100%;
   background: #F6F6F6;
   padding: 10px;
 }
-.menu h2 {
+body main .menu h2 {
   padding-left: 20px;
 }
 @media screen and (min-width: 1024px) {
-  .menu {
+  body main .menu {
     padding: 10px 0px 40px;
   }
-  .menu h2 {
+  body main .menu h2 {
     padding-left: 120px;
     display: block;
     width: 200px;
   }
 }
-.menu__cards {
+body main .menu__cards {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.menu__cards a {
-  width: 349px;
+body main .menu__cards a {
+  width: 320px;
 }
 @media screen and (min-width: 1024px) {
-  .menu__cards {
+  body main .menu__cards {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -166,24 +169,23 @@ html body a {
     column-gap: 80px;
     flex-wrap: wrap;
   }
-  .menu__cards a {
+  body main .menu__cards a {
     width: 35%;
   }
 }
-
-.card {
+body main .card {
   position: relative;
   background: white;
   border-radius: 20px;
   margin: 20px auto;
 }
-.card img {
+body main .card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-.card__paragraphe {
+body main .card__paragraphe {
   background: #99E2D0;
   color: #20705d;
   border-radius: 3px;
@@ -194,29 +196,29 @@ html body a {
   font-weight: 450;
   font-size: 14px;
 }
-.card__content {
+body main .card__content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 3px 10px 5px;
 }
-.card__heart {
+body main .card__heart {
   position: relative;
 }
-.card__heart:hover .card__heart--full {
+body main .card__heart:hover body main .card__heart--full {
   opacity: 1;
 }
-.card__heart--empty {
+body main .card__heart--empty {
   position: relative;
   font-size: 20px;
   transition: opacity 1s ease;
   opacity: 1;
 }
-.card__heart--empty:hover {
+body main .card__heart--empty:hover {
   opacity: 0;
 }
-.card__heart--full {
+body main .card__heart--full {
   font-size: 20px;
   position: absolute;
   top: 0;
@@ -314,6 +316,7 @@ html body a {
 }
 /*********header*******/
 body header {
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -355,13 +358,15 @@ body header input::-webkit-input-placeholder {
   color: #444444;
 }
 
-.footer {
+body .footer {
+  width: 100%;
+  box-sizing: border-box;
   background: #353535;
   color: white;
   padding: 25px;
 }
 @media screen and (min-width: 1024px) {
-  .footer {
+  body .footer {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
@@ -371,32 +376,32 @@ body header input::-webkit-input-placeholder {
     padding: 0 20px 15px;
   }
 }
-.footer img {
+body .footer img {
   filter: brightness(0) saturate(100%) invert(99%) sepia(65%) saturate(56%) hue-rotate(238deg) brightness(110%) contrast(96%);
   width: 130px;
   padding-top: 10px;
   padding-right: 20px;
 }
-.footer ul {
+body .footer ul {
   list-style-type: none;
   padding: 15px;
   margin: 0;
 }
 @media screen and (min-width: 1024px) {
-  .footer ul {
+  body .footer ul {
     padding-bottom: 0;
   }
 }
-.footer li {
+body .footer li {
   padding-bottom: 10px;
 }
 @media screen and (min-width: 1024px) {
-  .footer li {
+  body .footer li {
     display: inline-block;
     padding-left: 20px;
   }
 }
-.footer li i {
+body .footer li i {
   padding-right: 12px;
 }
 

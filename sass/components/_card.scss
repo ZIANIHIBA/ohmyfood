@@ -3,7 +3,10 @@
 @use"../base/base" as*;
 
 /****restaurant*****/
+body{ 
+  main{ 
 .menu {
+  box-sizing: border-box;
   width: 100%;
   background: $primary-color;
   padding: 10px  ;
@@ -22,7 +25,7 @@
 
   &__cards {
     a {
-      width: 349px;
+      width: 320px;
     }
     @include flex(column,center);
    
@@ -94,4 +97,6 @@
     }
      
   }
+}
+}
 }

@@ -3,7 +3,9 @@
 @use"../base/base" as*;
 
 /*******fonctionement ******/
+body{ 
 .fonctionement {
+  box-sizing: border-box;
   width: 100%;
   h2{
     padding-left: 30px;
@@ -63,4 +65,5 @@
     }
   }
 } 
+}
   
