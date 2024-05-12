@@ -51,10 +51,10 @@ body main .home__btn {
   font-size: 16px;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   box-shadow: 0 8px 10px #cecece;
-  transition: all 0.5;
+  transition: all 100ms;
 }
 body main .home__btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
   opacity: 0.5;
 }
 
@@ -312,7 +312,7 @@ main .menu__cards .card__heart:hover main .menu__cards .card__heart--full {
 }
 main .menu__cards .card__heart--empty {
   position: relative;
-  font-size: 20px;
+  font-size: 30px;
   transition: opacity 1s ease;
   opacity: 1;
 }
@@ -320,7 +320,7 @@ main .menu__cards .card__heart--empty:hover {
   opacity: 0;
 }
 main .menu__cards .card__heart--full {
-  font-size: 20px;
+  font-size: 30px;
   position: absolute;
   top: 0;
   left: 0;
@@ -425,7 +425,7 @@ body header {
   align-items: center;
 }
 body header img {
-  width: 220px;
+  width: 210px;
   margin: auto;
   padding-top: 20px;
 }
