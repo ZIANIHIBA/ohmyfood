@@ -116,6 +116,7 @@ body .fonctionement .fonctionement-card__title .number, body .fonctionement .fon
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  padding-top: 5px;
   text-align: center;
   color: white;
   background: #9356DC;
