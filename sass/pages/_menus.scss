@@ -201,9 +201,10 @@
       }
     }
     .home__btn {
+      @include Btn;
       margin: auto;
       display: block;
-      
+      cursor: pointer;
       width: 160px;
       height: 45px;
       }
