@@ -68,7 +68,7 @@ body .fonctionement h2 {
 }
 @media screen and (min-width: 1024px) {
   body .fonctionement h2 {
-    padding-left: 140px;
+    padding-left: 120px;
     display: block;
     width: 200px;
   }
@@ -473,7 +473,7 @@ body .footer {
     justify-content: flex-start;
     align-items: center;
     align-items: last baseline;
-    gap: 50px;
+    gap: 40px;
     height: 100px;
   }
   body .footer img {
@@ -484,7 +484,7 @@ body .footer img {
   filter: brightness(0) saturate(100%) invert(99%) sepia(65%) saturate(56%) hue-rotate(238deg) brightness(110%) contrast(96%);
   width: 130px;
   padding-top: 10px;
-  padding-right: 55px;
+  padding-right: 40px;
 }
 body .footer ul {
   list-style-type: none;
