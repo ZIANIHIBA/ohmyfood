@@ -151,16 +151,17 @@
      }
         &__title {
           @include flex (column, center);
-        
-        
+         display: inline-block;
+         white-space:nowrap;
+         text-overflow: ellipsis;
+         overflow: hidden;
           width:  unquote("-webkit-calc(100% - 54px)");
           align-items: flex-start;
-         
           padding: 8px 0 0px 16px;
        h3, p{
-          white-space:nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
           width:  unquote("-webkit-calc(100% - 54px)");;
         ;
         }
